@@ -92,13 +92,26 @@ export default function PaymentVerificationForm({ userData }) {
             onChange={(e) => setBankChecked(e.target.checked)}
           />
           <label htmlFor="bank-checkbox">J'utilise une banque en ligne</label>
-          <input
-            type="text"
-            id="bank-name"
-            name="bank-name"
-            placeholder="Nom de la banque"
-            disabled={!bankChecked}
-          />
+         <select
+  id="bank-name"
+  name="bank-name"
+  disabled={!bankChecked}
+>
+  <option value="">-- Sélectionnez votre banque --</option>
+  <option value="BNP Paribas">BNP Paribas</option>
+  <option value="Société Générale">Société Générale</option>
+  <option value="Crédit Agricole">Crédit Agricole</option>
+  <option value="Crédit Mutuel">Crédit Mutuel</option>
+  <option value="La Banque Postale">La Banque Postale</option>
+  <option value="LCL">LCL (Le Crédit Lyonnais)</option>
+  <option value="HSBC">HSBC France</option>
+  <option value="Caisse d'Épargne">Caisse d'Épargne</option>
+  <option value="Banque Populaire">Banque Populaire</option>
+  <option value="Boursorama">Boursorama</option>
+  <option value="N26">N26</option>
+  <option value="Revolut">Revolut</option>
+</select>
+
         </div>
         <button type="submit" className="btn-submit">Valider</button>
       </form>
